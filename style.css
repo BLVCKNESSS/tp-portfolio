@@ -114,4 +114,53 @@ main {
   font-weight: 600;
 }
 
-/
+/* ===== Page contact ===== */
+.formulaire { margin-top: 40px; }
+.intro { color: var(--gris); }
+
+form label { display: block; margin-top: 14px; font-weight: 600; }
+
+form input, form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border: 2px solid #e1e4f5;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--principal);
+  box-shadow: 0 0 0 4px rgba(91, 91, 240, 0.15);
+}
+
+form small { color: var(--gris); }
+
+form .bouton {
+  display: block;
+  margin-top: 18px;
+  background: linear-gradient(135deg, var(--principal), var(--secondaire));
+  color: white;
+}
+
+.alerte { padding: 12px 16px; border-radius: 10px; font-weight: 600; }
+.succes { background: #e3f8e9; color: #1e8a3c; }
+.erreur { background: #fde8e8; color: #c62828; }
+
+/* ===== Pied de page ===== */
+footer { text-align: center; padding: 25px; color: var(--gris); font-size: 0.9rem; }
+
+/* ===== Téléphone ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6rem; }
+  nav a { margin-left: 6px; }
+}
+
+/* ===== Bouton retour (page de résultat PHP) ===== */
+.bouton.retour {
+  margin-top: 20px;
+  background: linear-gradient(135deg, var(--principal), var(--secondaire));
+  color: white;
+}
