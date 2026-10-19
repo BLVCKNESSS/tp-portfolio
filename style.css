@@ -1,0 +1,117 @@
+/* Couleurs du site (modifiables ici) */
+:root {
+  --fond: #f5f7ff;
+  --carte: #ffffff;
+  --texte: #1f2340;
+  --gris: #6b7194;
+  --principal: #5b5bf0;
+  --secondaire: #8b5cf6;
+  --rayon: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+/* ===== En-tête ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--principal); }
+
+nav a {
+  text-decoration: none;
+  color: var(--gris);
+  margin-left: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+nav a:hover { color: var(--principal); }
+nav a.actif { background: var(--principal); color: white; }
+
+/* ===== Section d'accueil ===== */
+.hero {
+  text-align: center;
+  padding: 70px 20px 90px;
+  color: white;
+  background: linear-gradient(135deg, var(--principal), var(--secondaire));
+  border-radius: 0 0 40px 40px;
+}
+.hero h1 { margin: 15px 0 8px; font-size: 2.2rem; }
+.hero p { max-width: 520px; margin: 0 auto 25px; opacity: 0.9; }
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid white;
+}
+
+/* ===== Boutons ===== */
+.bouton {
+  display: inline-block;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: var(--principal);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.bouton:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); }
+
+/* ===== Contenu ===== */
+main {
+  max-width: 800px;
+  margin: -40px auto 40px;
+  padding: 0 15px;
+}
+
+.carte {
+  background: var(--carte);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: var(--rayon);
+  box-shadow: 0 4px 18px rgba(91, 91, 240, 0.1);
+}
+.carte h2 { margin-top: 0; color: var(--principal); }
+
+.liste { padding-left: 20px; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 10px; }
+.badges span {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #eceeff;
+  color: var(--principal);
+  font-weight: 600;
+}
+
+/
