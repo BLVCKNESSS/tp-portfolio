@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span class="logo">CDWFS</span>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="contact.html" class="actif">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carte formulaire">
+      <h2>Contactez-moi</h2>
+      <p class="intro">Une question ou un projet ? Écrivez-moi, je réponds rapidement.</p>
+
+      <!-- Le formulaire envoie les données au fichier PHP -->
+      <form id="form-contact" method="post" action="traitement.php">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="exemple@mail.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+        <small id="compteur">0 caractère</small>
+
+        <p id="erreur-js" class="alerte erreur" hidden></p>
+        <button type="submit" class="bouton">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CDWFS - Tous droits réservés</p>
+  </footer>
+
+  <!-- Le JavaScript est dans son propre fichier -->
+  <script src="script.js"></script>
+</body>
+</html>
